@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credit Limit</title>
+    <style>
+        body{
+            padding-left: 20%;
+            padding-top: 100px;
+        }
+        #after{
+            visibility:hidden;
+        }
+    </style>
+    <script src="index.js"></script>
+</head>
+<body>
+    <form id="before">
+        Account number:<input required type="number"><br><br>
+        Balance at the beginning of the month:<input required type="number" id="balance"><br><br>
+        Total of the credits applied to account this month:<input required id="credit" type="number">
+        <br><br>
+        Total of all items charged this month:<input required type="number" id="charge">
+        <br><br>
+        <button onclick="register()" type="submit">register</button>
+        
+    </form>
+    <div id="after" >
+        <h2>successfully registered</h2>
+        <h4>Allowed credit limit:</h4>
+        <b id="cl"></b>
+        <br>
+        <h4>New Balance:</h4>
+        <b id="nb"></b>
+        <h3 id="exceed"></h3>
+    </div>
+</body>
+</html>
